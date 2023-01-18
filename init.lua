@@ -23,6 +23,9 @@ require('lazy').setup('plugins')
 -- [[ Setting options ]]
 -- See `:help vim.o`
 
+-- Set the tabstop
+vim.o.tabstop = 4
+
 -- Set highlight on search
 vim.o.hlsearch = false
 
@@ -48,7 +51,8 @@ vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd [[colorscheme onedark]]
+vim.g.sonokai_style = 'andromeda'
+vim.cmd [[colorscheme sonokai]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'

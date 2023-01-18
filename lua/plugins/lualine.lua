@@ -6,7 +6,7 @@ return {
     require('lualine').setup {
       options = {
         icons_enabled = false,
-        theme = 'onedark',
+        theme = 'sonokai',
         component_separators = '|',
         section_separators = '',
       },
