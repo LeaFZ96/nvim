@@ -52,5 +52,8 @@ return {
     config = function()
       vim.g.rainbow_active = 1
     end
-  }
+  },
+
+  -- Auto pairs
+  'jiangmiao/auto-pairs'
 }
