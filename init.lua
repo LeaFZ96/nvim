@@ -23,8 +23,12 @@ require('lazy').setup('plugins')
 -- [[ Setting options ]]
 -- See `:help vim.o`
 
--- Set the tabstop
-vim.o.tabstop = 4
+-- Set the basic settings
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
+vim.o.softtabstop = 2
+vim.o.autoindent = true
+vim.o.scrolloff = 8
 
 -- Set highlight on search
 vim.o.hlsearch = false
@@ -70,7 +74,7 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
   callback = function()
-  vim.highlight.on_yank()
+    vim.highlight.on_yank()
   end,
   group = highlight_group,
   pattern = '*',
