@@ -297,4 +297,11 @@ mason_lspconfig.setup_handlers {
 require('fidget').setup()
 
 -- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
+
+-- Remap of HJKL
+vim.keymap.set('n', 'H', '^')
+vim.keymap.set('n', 'L', '$')
+vim.keymap.set('n', 'J', '<C-d>')
+vim.keymap.set('n', 'K', '<C-u>')
+
+-- Move around opened buffers
